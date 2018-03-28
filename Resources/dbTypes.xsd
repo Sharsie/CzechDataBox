@@ -2,20 +2,20 @@
 <!--Created with Liquid XML Studio 7.1.5.1419 (http://www.liquid-technologies.com)-->
 <!-- ************************************************************************
    XSD schema typů použitých ve WSDL pro manipulaci s datovými schránkami a ve WSDL pro vyhledávání DS
-                       verze 2.27    
+                       verze 2.27
 
  změny:
   9.2.2009  verze 0.1  základní verze
  20.3.2009  verze 1.0  - přidány elementy (na první úrovni) k jednotlivým typům pro použití jako parametry ve WSDL (document/literal)+komplexní typy pro tyto elementy popisující jednotlivé parametry operací
- 13.5 2009  verze 1.5  - odstraněn nepotřebný element GetOwnerInfoFromLogin  					
+ 13.5 2009  verze 1.5  - odstraněn nepotřebný element GetOwnerInfoFromLogin
                        - doplněna kardinalita některých elementů v odpovědích od serveru - při výskytu některých chyb se vrací pouze dbStatus
                        - doplněna vlastnosti nillable = TRUE u některých elementů vč. stringových
   3.6.2009  verze 2.0  - novela zákona 300/2008 Sb.
-                       - ve struktuře tdbOwnerInfo přibylo 5 elementů: 
+                       - ve struktuře tdbOwnerInfo přibylo 5 elementů:
                                 - identifier typu string:   externí identifkátor schránky pro poskytovatele dat OVM a PO, možná PFO
                                 - registryCode typu string: kód externího registru PFO
                                 - dbState typu int:         stav DS (0-?) pouze 1 = aktivní DS k doručování, použití ve FindDataBox
-                                - dbEffectiveOVM typu boolean:   příznak, že DS vystupuje jako OVM (§5a) 
+                                - dbEffectiveOVM typu boolean:   příznak, že DS vystupuje jako OVM (§5a)
                                 - dbOpenAddressing typu boolean: příznak, že ne-OVM DS má aktivováno volné adresování (§18a)
                        - ve struktuře tdbUserInfo přibylo 5 elementů:
                                 - ic typu string:        IČ firmy (PO), který vystupuje v datech z OR jako statutární zástupce této PO
@@ -26,28 +26,28 @@
                        - na vstupu CreateDataBox přibyly dva nepovinné elementy:
                                 - dbUpperDBId typu tIdDb (string 7): ID nadřízené DS typu OVM (§6 a 7)
                                 - dbCEOLabel typu string: název funkce vedoucího OVM (pro rozeslání dopisů)
-                       - přidány elementy a typy pro WS SetEffectiveOVM  
-                       - přidány elementy a typy pro WS ClearEffectiveOVM  
-                       - přidány elementy a typy pro WS SetOpenAddressing  
-                       - přidány elementy a typy pro WS ClearOpenAddressing  
+                       - přidány elementy a typy pro WS SetEffectiveOVM
+                       - přidány elementy a typy pro WS ClearEffectiveOVM
+                       - přidány elementy a typy pro WS SetOpenAddressing
+                       - přidány elementy a typy pro WS ClearOpenAddressing
  11.6.2009 - verze 2.1  - upraveny elementy služby NewAccessData - dbAccessDataId přesunut ze vstupu na výstup a přidán element dbVirtual na vstup
                         - přidány nepovinné elementy dbApproved a dbExterRefNumber v grupě gExtApproval na vstup všech služeb SM
                         - změna namespace pro verzi ISDS 2.0
                         - přidány elementy pro WS Activate
                         - přidány elementy pro WS CreateDataBoxPFOInfo
- 1.10.2009 - verze 2.5  - změna délky typu tUserID z 6 na 6-12		
+ 1.10.2009 - verze 2.5  - změna délky typu tUserID z 6 na 6-12
  1.11.2009 - verze 2.6  - komerční provoz
- 11.10.2010 - verze 2.10 - u NewAccessData přibyl na vstupu nepovinný element email, na výstupu element dbUserID pro nové ID uživatele, vše pro použití s Aktivačním portálem CzechPointu 
+ 11.10.2010 - verze 2.10 - u NewAccessData přibyl na vstupu nepovinný element email, na výstupu element dbUserID pro nové ID uživatele, vše pro použití s Aktivačním portálem CzechPointu
                          - u AddDataBoxUser přibyly na vstupu nepovinné elementy dbVirtual a email, na výstupu elementy dbAccessDataId a dbUserID, vše pro použití s Aktivačním portálem CzechPointu
                          - u CreateDataBox přibyly na vstupu nepovinné elementy dbVirtual a email, na výstupu elementy dbAccessDataId a dbUserID, vše pro použití s Aktivačním portálem CzechPointu (zatím nepoužito)
                          - přidány typy pro WS GetDataBoxList
  23.11.2010 - verze 2.11 - u WS GetDataBoxUsers povolen nulový počet uživatelů
-                         - doplněn chybějící dbUserID u CreateDataBox pro CzechPOINT     
- 18.02.2011 - verze 2.12 - přidána definice pro neveřejnou WS DeleteDataBoxPromptly   
-                         - nové konstanty typu uživatele v tUserType: LIQUIDATOR a OFFICIAL_CERT   
+                         - doplněn chybějící dbUserID u CreateDataBox pro CzechPOINT
+ 18.02.2011 - verze 2.12 - přidána definice pro neveřejnou WS DeleteDataBoxPromptly
+                         - nové konstanty typu uživatele v tUserType: LIQUIDATOR a OFFICIAL_CERT
  25.09.2011 - verze 2.15 - novela zákona č.300/2008 Sb.
                          - přidána definice pro novou WS PDZInfo
- 06.03.2012 - verze 2.16 - přidána definice pro neveřejnou WS ChangeBoxesType  
+ 06.03.2012 - verze 2.16 - přidána definice pro neveřejnou WS ChangeBoxesType
  20.11.2012 - verze 2.18 - přidána definice pro WS DataBoxCreditInfo
  1.12.2014 - verze 2.19 - přidána definice pro WS ISDSSearch2
  15.7.2015 - verze 2.20 - přidána definice WS GetDataBoxActivityStatus
@@ -55,14 +55,14 @@
  18.9.2015 - verze 2.21 - přidána definice pro WS FindPersonalDataBox
  14.10.2015 - verze 2.22 - přidána hodnota OVM_MAIN u elementu searchScope ve WS ISDSSearch
  7.1.2016  - verze 2.23 - na vstupu služeb CreateDataBox, UpdateDataBoxDescr, AddDataBoxUser a UpdateDataBoxUser použita rozšířené skupina adresních elementů gAddressExt
- 10.3.2016 - verze 2.24 - přidána definice pro DTInfo				
- 10.8.2016 - verze 2.25 - přidána definice pro PDZSendInfo				
+ 10.3.2016 - verze 2.24 - přidána definice pro DTInfo
+ 10.8.2016 - verze 2.25 - přidána definice pro PDZSendInfo
  31.1.2017 - verze 2.26 - přidány nové typy uživatelů v tUserType: GUARDIAN a RECEIVER
-                        - přidán typ schránky PFO_AUDITOR do tDbType a searchScope 
+                        - přidán typ schránky PFO_AUDITOR do tDbType a searchScope
                         - odebrány typy pro nepoužívanou CreateDataBoxPFOInfo a ChangeBoxesType
 			            - u CreateDataBox přidány nepovinné atributy pro CzP a atribut PDZ pro zapnutí PDZ příjmu (VT)
- 2.5.2017 - verze 2.27	- přidány typy schránek OVM_FO, OVM_PFO a OVM_PO do tDbType a searchScope 
-						
+ 2.5.2017 - verze 2.27	- přidány typy schránek OVM_FO, OVM_PFO a OVM_PO do tDbType a searchScope
+
 **************************************************************************** -->
 <xs:schema xmlns:tns="http://isds.czechpoint.cz/v20" elementFormDefault="qualified" targetNamespace="http://isds.czechpoint.cz/v20" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:simpleType name="tIdDb">

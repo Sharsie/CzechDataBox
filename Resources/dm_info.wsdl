@@ -12,115 +12,115 @@
         9. Seznam změněných zpráv - GetMessageStateChanges
         10. Informace o odesílateli zprávy - GetMessageAuthor
         11. Informace o způsobu posílání PDZ - PDZInfo
-        12. smazání dlouhodbě uložené DZ (trezorové) - EraseMessage 
-        
-              
-                          verze 2.26 
+        12. smazání dlouhodbě uložené DZ (trezorové) - EraseMessage
 
-   Změny:  
+
+                          verze 2.26
+
+   Změny:
      4.2.2009 verze 0.1
-    20.3.2009 verze 1.0   - formální úpravy vyhovující WS-I Basic Profile   
+    20.3.2009 verze 1.0   - formální úpravy vyhovující WS-I Basic Profile
      8.4.2009 verze 1.2   - změna názvů WSDL, rozložení operací mezi WSDL
-     3.6.2009 verze 2.0   - novela                               
-    1.11.2009 verze 2.6   - přidána WS ConfirmDelivery 
+     3.6.2009 verze 2.0   - novela
+    1.11.2009 verze 2.6   - přidána WS ConfirmDelivery
    11.10.2010 verze 2.10  - změna URL v důsledku přechodu na Basic autentizaci
                           - přidání WS GetMessageStateChanges
-   10.11.2010 verze 2.11  - přidání WS GetMessageAuthor     
-   25.8.2010  verze 2.14  - novela zákona 300   
-   12.4.2012  verze 2.16  - přidání WS EraseMessage      
+   10.11.2010 verze 2.11  - přidání WS GetMessageAuthor
+   25.8.2010  verze 2.14  - novela zákona 300
+   12.4.2012  verze 2.16  - přidání WS EraseMessage
    14.10.2015 verze 2.22  - sjednocení verzí
    31.1.2017  verze 2.26  - sjednocení verzí
 ************************************************************************ -->
 
-<definitions name="ISDS_dmMessCreate" targetNamespace="http://isds.czechpoint.cz/v20" 
-                                  xmlns="http://schemas.xmlsoap.org/wsdl/" 
-                                  xmlns:xs="http://www.w3.org/2001/XMLSchema" 
-                                  xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" 
+<definitions name="ISDS_dmMessCreate" targetNamespace="http://isds.czechpoint.cz/v20"
+                                  xmlns="http://schemas.xmlsoap.org/wsdl/"
+                                  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                                  xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
                                   xmlns:tns="http://isds.czechpoint.cz/v20">
-                                
+
   <types>
     <xs:schema targetNamespace="http://isds.czechpoint.cz/v20">
       <xs:include schemaLocation="dmBaseTypes.xsd" />
     </xs:schema>
   </types>
-  
+
   <!-- ******************************************************************* -->
 
   <message name="MessageVerifyRequest">
-    <part name="parameter" element="tns:VerifyMessage" />        
+    <part name="parameter" element="tns:VerifyMessage" />
   </message>
   <message name="MessageVerifyResponse">
-    <part name="parameter" element="tns:VerifyMessageResponse" />        
+    <part name="parameter" element="tns:VerifyMessageResponse" />
   </message>
 
   <message name="MessageEnvelopeDownloadRequest">
-    <part name="parameter" element="tns:MessageEnvelopeDownload" />        
+    <part name="parameter" element="tns:MessageEnvelopeDownload" />
   </message>
   <message name="MessageEnvelopeDownloadResponse">
-    <part name="parameter" element="tns:MessageEnvelopeDownloadResponse" />        
+    <part name="parameter" element="tns:MessageEnvelopeDownloadResponse" />
   </message>
 
   <message name="MarkMessageAsDownloadedRequest">
-    <part name="parameter" element="tns:MarkMessageAsDownloaded" />        
+    <part name="parameter" element="tns:MarkMessageAsDownloaded" />
   </message>
   <message name="MarkMessageAsDownloadedResponse">
-    <part name="parameter" element="tns:MarkMessageAsDownloadedResponse" />        
+    <part name="parameter" element="tns:MarkMessageAsDownloadedResponse" />
   </message>
 
   <message name="DeliveryMessageRequest">
-    <part name="parameter" element="tns:GetDeliveryInfo" />        
+    <part name="parameter" element="tns:GetDeliveryInfo" />
   </message>
   <message name="DeliveryMessageResponse">
-    <part name="parameter" element="tns:GetDeliveryInfoResponse" />        
+    <part name="parameter" element="tns:GetDeliveryInfoResponse" />
   </message>
 
   <message name="SignedDeliveryMessageRequest">
-    <part name="parameter" element="tns:GetSignedDeliveryInfo" />        
+    <part name="parameter" element="tns:GetSignedDeliveryInfo" />
   </message>
   <message name="SignedDeliveryMessageResponse">
-    <part name="parameter" element="tns:GetSignedDeliveryInfoResponse" />        
+    <part name="parameter" element="tns:GetSignedDeliveryInfoResponse" />
   </message>
 
   <message name="ListOfSentMessagesRequest">
-    <part name="parameter" element="tns:GetListOfSentMessages" />        
+    <part name="parameter" element="tns:GetListOfSentMessages" />
   </message>
   <message name="ListOfSentMessagesResponse">
-    <part name="parameter" element="tns:GetListOfSentMessagesResponse" />        
+    <part name="parameter" element="tns:GetListOfSentMessagesResponse" />
   </message>
 
   <message name="ListOfReceivedMessagesRequest">
-    <part name="parameter" element="tns:GetListOfReceivedMessages" />        
+    <part name="parameter" element="tns:GetListOfReceivedMessages" />
   </message>
   <message name="ListOfReceivedMessagesResponse">
-    <part name="parameter" element="tns:GetListOfReceivedMessagesResponse" />        
+    <part name="parameter" element="tns:GetListOfReceivedMessagesResponse" />
   </message>
 
   <message name="ConfirmDeliveryRequest">
-    <part name="parameter" element="tns:ConfirmDelivery" />        
+    <part name="parameter" element="tns:ConfirmDelivery" />
   </message>
   <message name="ConfirmDeliveryResponse">
-    <part name="parameter" element="tns:ConfirmDeliveryResponse" />        
+    <part name="parameter" element="tns:ConfirmDeliveryResponse" />
   </message>
-  
+
   <message name="GetMessageStateChangesRequest">
-    <part name="parameter" element="tns:GetMessageStateChanges" />        
+    <part name="parameter" element="tns:GetMessageStateChanges" />
   </message>
   <message name="GetMessageStateChangesResponse">
-    <part name="parameter" element="tns:GetMessageStateChangesResponse" />        
+    <part name="parameter" element="tns:GetMessageStateChangesResponse" />
   </message>
 
   <message name="GetMessageAuthorRequest">
-    <part name="parameter" element="tns:GetMessageAuthor" />        
+    <part name="parameter" element="tns:GetMessageAuthor" />
   </message>
   <message name="GetMessageAuthorResponse">
-    <part name="parameter" element="tns:GetMessageAuthorResponse" />        
+    <part name="parameter" element="tns:GetMessageAuthorResponse" />
   </message>
 
   <message name="EraseMessageRequest">
-    <part name="parameter" element="tns:EraseMessage" />        
+    <part name="parameter" element="tns:EraseMessage" />
   </message>
   <message name="EraseMessageResponse">
-    <part name="parameter" element="tns:EraseMessageResponse" />        
+    <part name="parameter" element="tns:EraseMessageResponse" />
   </message>
 
 <!-- ******************************************************************* -->
@@ -246,7 +246,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
- 
+
     <operation name="GetListOfReceivedMessages">
       <soap:operation soapAction="" />
       <input>
@@ -256,7 +256,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
- 
+
      <operation name="ConfirmDelivery">
       <soap:operation soapAction="" />
       <input>
@@ -266,7 +266,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    
+
      <operation name="GetMessageStateChanges">
       <soap:operation soapAction="" />
       <input>
@@ -276,7 +276,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    
+
      <operation name="GetMessageAuthor">
       <soap:operation soapAction="" />
       <input>
@@ -286,7 +286,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    
+
      <operation name="EraseMessage">
       <soap:operation soapAction="" />
       <input>
@@ -307,4 +307,3 @@
   </service>
 
 </definitions>
-
