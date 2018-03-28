@@ -4,112 +4,107 @@ namespace Defr\CzechDataBox\Api;
 
 class tAddDBUserInput
 {
+
     /**
-     * @var tDbOwnerInfo
+     * @var tDbOwnerInfoExt $dbOwnerInfo
      */
     protected $dbOwnerInfo = null;
 
     /**
-     * @var tDbUserInfo
+     * @var dbUserInfo $dbUserInfo
      */
     protected $dbUserInfo = null;
 
     /**
-     * @var bool
+     * @var boolean $dbVirtual
      */
     protected $dbVirtual = null;
 
     /**
-     * @var string
+     * @var string $email
      */
     protected $email = null;
 
     /**
-     * @var bool
+     * @var boolean $dbApproved
      */
     protected $dbApproved = null;
 
     /**
-     * @var string
+     * @var string $dbExternRefNumber
      */
     protected $dbExternRefNumber = null;
 
     /**
-     * @param tDbOwnerInfo $dbOwnerInfo
-     * @param tDbUserInfo  $dbUserInfo
-     * @param bool         $dbVirtual
-     * @param string       $email
-     * @param bool         $dbApproved
-     * @param string       $dbExternRefNumber
+     * @param tDbOwnerInfoExt $dbOwnerInfo
+     * @param dbUserInfo $dbUserInfo
+     * @param boolean $dbVirtual
+     * @param string $email
+     * @param boolean $dbApproved
+     * @param string $dbExternRefNumber
      */
     public function __construct($dbOwnerInfo = null, $dbUserInfo = null, $dbVirtual = null, $email = null, $dbApproved = null, $dbExternRefNumber = null)
     {
-        $this->dbOwnerInfo = $dbOwnerInfo;
-        $this->dbUserInfo = $dbUserInfo;
-        $this->dbVirtual = $dbVirtual;
-        $this->email = $email;
-        $this->dbApproved = $dbApproved;
-        $this->dbExternRefNumber = $dbExternRefNumber;
+      $this->dbOwnerInfo = $dbOwnerInfo;
+      $this->dbUserInfo = $dbUserInfo;
+      $this->dbVirtual = $dbVirtual;
+      $this->email = $email;
+      $this->dbApproved = $dbApproved;
+      $this->dbExternRefNumber = $dbExternRefNumber;
     }
 
     /**
-     * @return tDbOwnerInfo
+     * @return tDbOwnerInfoExt
      */
     public function getDbOwnerInfo()
     {
-        return $this->dbOwnerInfo;
+      return $this->dbOwnerInfo;
     }
 
     /**
-     * @param tDbOwnerInfo $dbOwnerInfo
-     *
+     * @param tDbOwnerInfoExt $dbOwnerInfo
      * @return \Defr\CzechDataBox\Api\tAddDBUserInput
      */
     public function setDbOwnerInfo($dbOwnerInfo)
     {
-        $this->dbOwnerInfo = $dbOwnerInfo;
-
-        return $this;
+      $this->dbOwnerInfo = $dbOwnerInfo;
+      return $this;
     }
 
     /**
-     * @return tDbUserInfo
+     * @return dbUserInfo
      */
     public function getDbUserInfo()
     {
-        return $this->dbUserInfo;
+      return $this->dbUserInfo;
     }
 
     /**
-     * @param tDbUserInfo $dbUserInfo
-     *
+     * @param dbUserInfo $dbUserInfo
      * @return \Defr\CzechDataBox\Api\tAddDBUserInput
      */
     public function setDbUserInfo($dbUserInfo)
     {
-        $this->dbUserInfo = $dbUserInfo;
-
-        return $this;
+      $this->dbUserInfo = $dbUserInfo;
+      return $this;
     }
 
     /**
-     * @return bool
+     * @return boolean
      */
     public function getDbVirtual()
     {
-        return $this->dbVirtual;
+      return $this->dbVirtual;
     }
 
     /**
-     * @param bool $dbVirtual
-     *
+     * @param boolean $dbVirtual
      * @return \Defr\CzechDataBox\Api\tAddDBUserInput
      */
     public function setDbVirtual($dbVirtual)
     {
-        $this->dbVirtual = $dbVirtual;
-
-        return $this;
+      $this->dbVirtual = $dbVirtual;
+      return $this;
     }
 
     /**
@@ -117,39 +112,35 @@ class tAddDBUserInput
      */
     public function getEmail()
     {
-        return $this->email;
+      return $this->email;
     }
 
     /**
      * @param string $email
-     *
      * @return \Defr\CzechDataBox\Api\tAddDBUserInput
      */
     public function setEmail($email)
     {
-        $this->email = $email;
-
-        return $this;
+      $this->email = $email;
+      return $this;
     }
 
     /**
-     * @return bool
+     * @return boolean
      */
     public function getDbApproved()
     {
-        return $this->dbApproved;
+      return $this->dbApproved;
     }
 
     /**
-     * @param bool $dbApproved
-     *
+     * @param boolean $dbApproved
      * @return \Defr\CzechDataBox\Api\tAddDBUserInput
      */
     public function setDbApproved($dbApproved)
     {
-        $this->dbApproved = $dbApproved;
-
-        return $this;
+      $this->dbApproved = $dbApproved;
+      return $this;
     }
 
     /**
@@ -157,18 +148,17 @@ class tAddDBUserInput
      */
     public function getDbExternRefNumber()
     {
-        return $this->dbExternRefNumber;
+      return $this->dbExternRefNumber;
     }
 
     /**
      * @param string $dbExternRefNumber
-     *
      * @return \Defr\CzechDataBox\Api\tAddDBUserInput
      */
     public function setDbExternRefNumber($dbExternRefNumber)
     {
-        $this->dbExternRefNumber = $dbExternRefNumber;
-
-        return $this;
+      $this->dbExternRefNumber = $dbExternRefNumber;
+      return $this;
     }
+
 }

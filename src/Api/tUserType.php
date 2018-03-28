@@ -11,4 +11,8 @@ class tUserType
     const OFFICIAL = 'OFFICIAL';
     const OFFICIAL_CERT = 'OFFICIAL_CERT';
     const LIQUIDATOR = 'LIQUIDATOR';
+    const RECEIVER = 'RECEIVER';
+    const GUARDIAN = 'GUARDIAN';
+
+
 }
